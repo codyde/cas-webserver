@@ -1,0 +1,16 @@
+inputs: {}
+resources:
+  web1:
+    type: Cloud.Machine
+    networks:
+      - name: '${Cloud_Network_1.name}'
+    properties:
+      count: 1
+      image: Ubuntu
+      constraints:
+        - tag: 'cloud:vsphere'
+      flavor: medium
+      cloudConfig: |
+        #cloud-config
+        packages:
+          - apache2
