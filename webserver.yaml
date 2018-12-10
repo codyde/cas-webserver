@@ -20,20 +20,6 @@ resources:
         - name: '${Cloud_Network_1.name}'
       attachedDisks:
         - source: '${Cloud_Volume_1.id}'
-  db1:
-    type: Cloud.Machine
-    properties:
-      cloudConfig: |
-        #cloud-config
-        packages:
-          - postgres
-      count: 1
-      image: Ubuntu
-      constraints:
-        - tag: 'cloud:vsphere'
-      flavor: small
-      networks:
-        - name: '${Cloud_Network_1.name}'
   Cloud_Network_1:
     type: Cloud.Network
     properties:
