@@ -6,6 +6,7 @@ resources:
       cloudConfig: |
         #cloud-config
         packages:
+        hostname: "test"
           - apache2
       count: 1
       image: Ubuntu
