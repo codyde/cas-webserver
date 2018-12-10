@@ -16,3 +16,11 @@ resources:
       constraints:
         - tag: 'cloud:vsphere'
       flavor: small
+  web3:
+    type: Cloud.Machine
+    properties:
+      count: 1
+      image: Ubuntu
+      constraints:
+        - tag: 'cloud:vsphere'
+      flavor: small
