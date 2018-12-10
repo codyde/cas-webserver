@@ -1,13 +1,5 @@
 inputs: {}
 resources:
-  Cloud_Volume_1:
-    type: Cloud.Volume
-    properties:
-      capacityGb: 1
-  Cloud_Volume_2:
-    type: Cloud.Volume
-    properties:
-      capacityGb: 1
   Disk3:
     type: Cloud.Volume
     properties:
@@ -20,8 +12,6 @@ resources:
       constraints:
         - tag: 'cloud:vsphere'
       flavor: small
-      attachedDisks:
-        - source: '${Cloud_Volume_1.id}'
   web2:
     type: Cloud.Machine
     properties:
@@ -30,8 +20,6 @@ resources:
       constraints:
         - tag: 'cloud:vsphere'
       flavor: small
-      attachedDisks:
-        - source: '${Cloud_Volume_2.id}'
   web3:
     type: Cloud.Machine
     properties:
