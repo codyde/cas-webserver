@@ -5,7 +5,6 @@ resources:
     properties:
       cloudConfig: |
         #cloud-config
-        hostname: "webserver"
         packages:
           - apache2
       count: 1
