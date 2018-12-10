@@ -4,6 +4,10 @@ resources:
     type: Cloud.Volume
     properties:
       capacityGb: 1
+  Cloud_Volume_2:
+    type: Cloud.Volume
+    properties:
+      capacityGb: 1
   web1:
     type: Cloud.Machine
     properties:
@@ -22,6 +26,8 @@ resources:
       constraints:
         - tag: 'cloud:vsphere'
       flavor: small
+      attachedDisks:
+        - source: '${Cloud_Volume_2.id}'
   web3:
     type: Cloud.Machine
     properties:
