@@ -10,7 +10,7 @@ resources:
       count: 1
       image: Ubuntu
       constraints:
-        - tag: 'cloud:aws'
+        - tag: 'cloud:vsphere'
       flavor: small
       networks:
         - name: '${Cloud_Network_1.name}'
