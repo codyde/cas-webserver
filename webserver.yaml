@@ -8,6 +8,10 @@ resources:
     type: Cloud.Volume
     properties:
       capacityGb: 1
+  Disk3:
+    type: Cloud.Volume
+    properties:
+      capacityGb: 1
   web1:
     type: Cloud.Machine
     properties:
@@ -36,3 +40,9 @@ resources:
       constraints:
         - tag: 'cloud:vsphere'
       flavor: small
+      cloudConfig: | 
+        #cloud-config
+        packages:
+          - apache2
+      attachedDisks:
+        - source: '${Disk3.id}'
