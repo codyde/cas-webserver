@@ -15,21 +15,6 @@ resources:
       flavor: small
       networks:
         - name: '${Cloud_Network_1.name}'
-  db1:
-    type: Cloud.Machine
-    properties:
-      cloudConfig: |
-        #cloud-config
-        hostname: "database"
-        packages:
-          - postgres
-      count: 1
-      image: Ubuntu
-      constraints:
-        - tag: 'cloud:aws'
-      flavor: small
-      networks:
-        - name: '${Cloud_Network_1.name}'
   Cloud_Network_1:
     type: Cloud.Network
     properties:
