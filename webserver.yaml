@@ -1,1 +1,21 @@
 inputs: {}
+resources:
+  web1:
+    type: Cloud.Machine
+    properties:
+      cloudConfig: |
+        #cloud-config
+        packages:
+          - apache2
+      count: 1
+      image: Ubuntu
+      constraints:
+        - tag: 'cloud:aws'
+      flavor: small
+      networks:
+        - name: '${Cloud_Network_1.name}'
+  Cloud_Network_1:
+    type: Cloud.Network
+    properties:
+      name: Core
+      networkType: existing
