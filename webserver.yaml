@@ -10,7 +10,3 @@ resources:
       constraints:
         - tag: 'cloud:vsphere'
       flavor: medium
-      cloudConfig: |
-        #cloud-config
-        packages:
-          - apache2
