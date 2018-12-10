@@ -1,18 +1,5 @@
 inputs: {}
 resources:
-  Cloud_Service_AWS_Route53_Record_1:
-    type: Cloud.Service.AWS.Route53.Record
-    dependsOn:
-      - web1
-    properties:
-      name: 'cdearklandr53'
-      type: 'A'
-      zone_id: 'Z2V6LARWENQR9H'
-      provider: AWS TMM
-      provider_region: 'us-west-1'
-      ttl: 300
-      records:
-        - ${web1.address}
   web1:
     type: Cloud.Machine
     properties:
