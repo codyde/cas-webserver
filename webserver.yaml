@@ -4,17 +4,14 @@ resources:
     type: Cloud.Volume
     properties:
       capacityGb: 1
-  Cloud_Volume_2:
-    type: Cloud.Volume
-    properties:
-      capacityGb: 1
-  Disk3:
-    type: Cloud.Volume
-    properties:
-      capacityGb: 1
+  
   web1:
     type: Cloud.Machine
     properties:
+      cloudConfig: |
+        #cloud-config
+        packages:
+          - apache2
       count: 1
       image: Ubuntu
       constraints:
@@ -24,34 +21,6 @@ resources:
         - name: '${Cloud_Network_1.name}'
       attachedDisks:
         - source: '${Cloud_Volume_1.id}'
-  web2:
-    type: Cloud.Machine
-    properties:
-      count: 1
-      image: Ubuntu
-      constraints:
-        - tag: 'cloud:vsphere'
-      flavor: small
-      networks:
-        - name: '${Cloud_Network_1.name}'  
-      attachedDisks:
-        - source: '${Cloud_Volume_2.id}'  
-  web3:
-    type: Cloud.Machine
-    properties:
-      count: 1
-      image: Ubuntu
-      constraints:
-        - tag: 'cloud:vsphere'
-      flavor: small
-      cloudConfig: | 
-        #cloud-config
-        packages:
-          - apache2
-      attachedDisks:
-        - source: '${Disk3.id}'
-      networks:
-        - name: '${Cloud_Network_1.name}'
   Cloud_Network_1:
     type: Cloud.Network
     properties:
