@@ -1,9 +1,5 @@
 inputs: {}
 resources:
-  Cloud_Volume_1:
-    type: Cloud.Volume
-    properties:
-      capacityGb: 1
   web1:
     type: Cloud.Machine
     properties:
@@ -18,8 +14,6 @@ resources:
       flavor: small
       networks:
         - name: '${Cloud_Network_1.name}'
-      attachedDisks:
-        - source: '${Cloud_Volume_1.id}'
   Cloud_Network_1:
     type: Cloud.Network
     properties:
