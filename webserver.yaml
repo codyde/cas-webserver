@@ -10,5 +10,5 @@ resources:
       count: 1
       image: Ubuntu
       constraints:
-        - tag: 'cloud:aws'
+        - tag: 'cloud:vsphere'
       flavor: small
