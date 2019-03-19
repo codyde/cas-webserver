@@ -8,7 +8,7 @@ resources:
         packages:
           - apache2
       count: 1
-      image: Ubuntu
+      image: ubuntu
       constraints:
-        - tag: cloud:vsphere
+        - tag: cloud:aws
       flavor: small
