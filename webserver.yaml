@@ -10,5 +10,5 @@ resources:
       count: 1
       image: ubuntu
       constraints:
-        - tag: cloud:aws
+        - tag: env:aws
       flavor: small
