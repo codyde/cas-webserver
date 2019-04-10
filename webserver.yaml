@@ -10,5 +10,5 @@ resources:
       count: 1
       image: ubuntu
       constraints:
-        - tag: env:aws
+        - tag: env:vsphere
       flavor: small
