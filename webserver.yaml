@@ -10,5 +10,5 @@ resources:
       count: 1
       image: ubuntu
       constraints:
-        - tag: env:vsphere
+        - tag: env:gcp
       flavor: small
