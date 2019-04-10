@@ -7,7 +7,6 @@ resources:
         #cloud-config
         packages:
           - apache2
-          - postgresql
       count: 1
       image: ubuntu
       constraints:
