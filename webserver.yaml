@@ -10,5 +10,18 @@ resources:
       count: 1
       image: ubuntu
       constraints:
-        - tag: env:aws
+        - tag: env:vsphere
       flavor: small
+  web2:
+    type: Cloud.Machine
+    properties:
+      cloudConfig: |
+        #cloud-config
+        packages:
+          - postgresql
+      count: 1
+      image: ubuntu
+      constraints:
+        - tag: env:vsphere
+      flavor: small
+
