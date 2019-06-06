@@ -12,7 +12,7 @@ resources:
       constraints:
         - tag: env:aws
       flavor: small
-  web2:
+  db1:
     type: Cloud.Machine
     properties:
       cloudConfig: |
