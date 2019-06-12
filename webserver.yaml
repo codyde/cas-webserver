@@ -1,6 +1,6 @@
 inputs: {}
 resources:
-  web1:
+  web:
     type: Cloud.Machine
     properties:
       cloudConfig: |
@@ -12,7 +12,7 @@ resources:
       constraints:
         - tag: env:aws
       flavor: small
-  db1:
+  db:
     type: Cloud.Machine
     properties:
       cloudConfig: |
