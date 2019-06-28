@@ -12,15 +12,3 @@ resources:
       constraints:
         - tag: env:aws
       flavor: small
-  db:
-    type: Cloud.Machine
-    properties:
-      cloudConfig: |
-        #cloud-config
-        packages:
-          - postgresql
-      count: 1
-      image: ubuntu
-      constraints:
-        - tag: env:aws
-      flavor: small
